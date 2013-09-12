@@ -16,3 +16,12 @@ deps = {
       File((Var("googlecode_url") % "skia") + "/trunk/tools/find_mac_sdk.py@" +
           Var("skia_revision")),
 }
+
+hooks = [
+  {
+    # A change to a .gyp, .gypi or to GYP itself should run the generator.
+    "name": "gyp",
+    "pattern": ".",
+    "action": ["python", "src/build/gyp_using_skia"]
+  }
+]
