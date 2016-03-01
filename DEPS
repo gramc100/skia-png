@@ -1,20 +1,16 @@
 vars = {
   "root_dir": "src",
-  "googlecode_url": "http://%s.googlecode.com/svn",
+  'chromium_git': 'https://chromium.googlesource.com',
 
-  "skia_revision": "11070",
+  "skia_revision": "819ab1028897c7ae8ea07cb342d48118d29daa5d",
 }
 
 deps = {
   "src/third_party/skia/":
-      (Var("googlecode_url") % "skia") + "/trunk@" + Var("skia_revision"),
+      Var('chromium_git') + '/skia.git' + '@' +  Var('skia_revision'),
 
-  "src/tools/gyp":
-      (Var("googlecode_url") % "gyp") + "/trunk@1700",
-
-  "src/tools/":
-      File((Var("googlecode_url") % "skia") + "/trunk/tools/find_mac_sdk.py@" +
-          Var("skia_revision")),
+  'src/tools/gyp':
+      Var('chromium_git') + '/external/gyp.git' + '@' + '5122240c5e5c4d8da12c543d82b03d6089eb77c5',
 }
 
 hooks = [
