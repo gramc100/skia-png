@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
     canvas.drawCircle(100, 400, 50, paint);
 
     //Same Image  (file, bitmap, image_type, quality)
-    SkImageEncoder::EncodeFile(filename.c_str(), bitmap, SkImageEncoder::kBMP_Type, 100);
+    SkImageEncoder::EncodeFile(filename.c_str(), bitmap, SkImageEncoder::kPNG_Type, 100);
 
     return 0;
 }

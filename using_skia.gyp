@@ -3,6 +3,9 @@
 # found in the LICENSE file.
 
 {
+  'variables': {
+    'skia_shared_lib': 1
+  },
   'targets': [
     {
       'configurations': {
@@ -27,7 +30,6 @@
         '-std=c++11'
       ],
       'cflags': [
-        '-Wl,--whole-archive',
         '-Werror',
         '-W',
         '-Wall',
