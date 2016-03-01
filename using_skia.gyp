@@ -27,6 +27,7 @@
         '-std=c++11'
       ],
       'cflags': [
+        '-Wl,--whole-archive',
         '-Werror',
         '-W',
         '-Wall',
