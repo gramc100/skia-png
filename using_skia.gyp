@@ -24,8 +24,6 @@
         'app/main.cpp'
       ],
       'ldflags': [
-        '-lskia',
-        '-stdlib=libc++',
         '-std=c++11'
       ],
       'cflags': [
